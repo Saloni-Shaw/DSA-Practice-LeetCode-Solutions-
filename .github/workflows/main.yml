@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Sync Code from LeetCode
-        uses: AkashSingh3031/leetcode-sync@v1.0.1
+        uses: joshcai/leetcode-sync@v1.7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ github.token }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
           destination-folder: 'solutions'
